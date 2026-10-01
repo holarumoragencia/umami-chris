@@ -14,8 +14,8 @@ const Trophy: React.FC<{frame: number}> = ({frame}) => {
 
   return (
     <svg
-      width={360}
-      height={360}
+      width={460}
+      height={460}
       viewBox="0 0 200 200"
       style={{
         transform: `rotate(${tilt * -14}deg) translateY(${tilt * 16}px)`,
@@ -42,21 +42,21 @@ export const Risk: React.FC = () => {
 
   return (
     <Stage style={exit(frame, 106)}>
-      <div style={{fontSize: 56, fontWeight: 500, ...enter(frame, 0)}}>{content.risk.lead}</div>
-      <div style={{marginTop: 40, display: 'flex', flexDirection: 'column', gap: 26}}>
+      <div style={{fontSize: 64, fontWeight: 500, letterSpacing: -1, ...enter(frame, 0)}}>{content.risk.lead}</div>
+      <div style={{marginTop: 44, display: 'flex', flexDirection: 'column', gap: 30}}>
         {content.risk.items.map((item, i) => {
           const start = 10 + i * 12;
           return (
             <div key={item} style={{display: 'flex', alignItems: 'center', gap: 28, ...enter(frame, start, 30)}}>
-              <XCircle p={progress(frame, start + 2, 16)} color={COLORS.accent} size={72} />
-              <span style={{fontSize: 68, fontWeight: 700, letterSpacing: -1.5}}>{item}</span>
+              <XCircle p={progress(frame, start + 2, 16)} color={COLORS.accent} size={88} />
+              <span style={{fontSize: 80, fontWeight: 700, letterSpacing: -2}}>{item}</span>
             </div>
           );
         })}
       </div>
       <div
         style={{
-          marginTop: 70,
+          marginTop: 40,
           display: 'flex',
           justifyContent: 'center',
           opacity: progress(frame, 10, 10),

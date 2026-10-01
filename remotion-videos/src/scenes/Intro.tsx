@@ -6,9 +6,9 @@ import {COLORS} from '../theme';
 import {Stage} from '../components/Stage';
 
 const COLS = 8;
-const ROWS = 5;
-// ~7% de la plantilla: 3 de cada 40 personas no están.
-const ABSENT = new Set([6, 17, 29]);
+const ROWS = 4;
+// Algunas personas de la plantilla "desaparecen".
+const ABSENT = new Set([6, 17, 26]);
 
 const Person: React.FC<{index: number; frame: number}> = ({index, frame}) => {
   const row = Math.floor(index / COLS);
@@ -23,8 +23,8 @@ const Person: React.FC<{index: number; frame: number}> = ({index, frame}) => {
 
   return (
     <svg
-      width={96}
-      height={96}
+      width={108}
+      height={108}
       viewBox="0 0 100 100"
       style={{transform: `scale(${s * (1 + mark * 0.12 - vanish * 0.12)})`}}
     >
@@ -51,17 +51,18 @@ export const Intro: React.FC = () => {
 
   return (
     <Stage style={out}>
-      <div style={{fontSize: 56, fontWeight: 500, lineHeight: 1.15, ...enter(frame, 4)}}>
+      <div style={{fontSize: 64, fontWeight: 500, lineHeight: 1.12, letterSpacing: -1, ...enter(frame, 4)}}>
         {content.intro.lead}
       </div>
       <div
         style={{
-          fontSize: 200,
+          fontSize: 250,
           fontWeight: 800,
-          letterSpacing: -8,
+          letterSpacing: -12,
           lineHeight: 1,
           color: COLORS.accent,
-          marginTop: 18,
+          marginTop: 10,
+          marginLeft: -10,
           fontVariantNumeric: 'tabular-nums',
           transformOrigin: 'left center',
           opacity: progress(frame, 10, 8),
@@ -70,15 +71,15 @@ export const Intro: React.FC = () => {
       >
         {formatNumber(value)}
       </div>
-      <div style={{fontSize: 56, fontWeight: 700, lineHeight: 1.15, marginTop: 16, ...enter(frame, 36)}}>
+      <div style={{fontSize: 64, fontWeight: 700, lineHeight: 1.12, letterSpacing: -1, marginTop: 8, whiteSpace: 'pre-line', ...enter(frame, 36)}}>
         {content.intro.after}
       </div>
       <div
         style={{
-          marginTop: 64,
+          marginTop: 52,
           display: 'grid',
           gridTemplateColumns: `repeat(${COLS}, 1fr)`,
-          rowGap: 4,
+          rowGap: 8,
           justifyItems: 'center',
         }}
       >

@@ -1,7 +1,7 @@
 import React from 'react';
 import {AbsoluteFill, Sequence} from 'remotion';
 import {Header} from './components/Header';
-import {Cost} from './scenes/Cost';
+import {Economy} from './scenes/Economy';
 import {Intro} from './scenes/Intro';
 import {Outro} from './scenes/Outro';
 import {Reaction} from './scenes/Reaction';
@@ -11,7 +11,7 @@ import {COLORS, FONT_FAMILY} from './theme';
 // Guion (30 fps, 15 s = 450 frames)
 const SCENES = {
   intro: {from: 0, duration: 110}, // 0,0–3,7 s  165.000 ausencias diarias
-  cost: {from: 110, duration: 108}, // 3,7–7,3 s  ~6.000 M€, 2,6% facturación
+  economy: {from: 110, duration: 108}, // 3,7–7,3 s  12,8% del PIB, 13% del empleo
   risk: {from: 218, duration: 118}, // 7,3–11,2 s lo que está en juego
   reaction: {from: 336, duration: 88}, // 11,2–14,1 s la reacción
   outro: {from: 424, duration: 26}, // 14,1–15 s firma
@@ -29,8 +29,8 @@ export const AbsentismoVideo: React.FC = () => (
     <Sequence from={SCENES.intro.from} durationInFrames={SCENES.intro.duration}>
       <Intro />
     </Sequence>
-    <Sequence from={SCENES.cost.from} durationInFrames={SCENES.cost.duration}>
-      <Cost />
+    <Sequence from={SCENES.economy.from} durationInFrames={SCENES.economy.duration}>
+      <Economy />
     </Sequence>
     <Sequence from={SCENES.risk.from} durationInFrames={SCENES.risk.duration}>
       <Risk />

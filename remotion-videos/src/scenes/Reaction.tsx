@@ -14,28 +14,28 @@ export const Reaction: React.FC = () => {
     <Stage style={exit(frame, 76)}>
       <div
         style={{
-          fontSize: 76,
+          fontSize: 96,
           fontWeight: 600,
           lineHeight: 1.1,
-          letterSpacing: -2,
+          letterSpacing: -3,
           whiteSpace: 'pre-line',
           ...enter(frame, 0, 40),
         }}
       >
         <span style={{opacity: 1 - dim * 0.55}}>{content.reaction.first}</span>
       </div>
-      <div style={{position: 'relative', marginTop: 40, alignSelf: 'flex-start', ...enter(frame, 22, 50)}}>
-        <div style={{fontSize: 150, fontWeight: 800, letterSpacing: -6, lineHeight: 1}}>
+      <div style={{position: 'relative', marginTop: 56, alignSelf: 'flex-start', ...enter(frame, 22, 50)}}>
+        <div style={{fontSize: 160, fontWeight: 800, letterSpacing: -7, lineHeight: 1, whiteSpace: 'nowrap'}}>
           {content.reaction.second}
         </div>
         <svg
           width="100%"
-          height={40}
+          height={48}
           viewBox="0 0 600 40"
           preserveAspectRatio="none"
-          style={{position: 'absolute', left: 0, bottom: -44}}
+          style={{position: 'absolute', left: 0, bottom: -56}}
         >
-          <DrawPath d="M6 26 C150 8 420 8 594 22" p={progress(frame, 36, 16)} color={COLORS.accent} width={12} />
+          <DrawPath d="M6 26 C150 8 420 8 594 22" p={progress(frame, 36, 16)} color={COLORS.accent} width={10} />
         </svg>
       </div>
     </Stage>

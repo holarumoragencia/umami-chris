@@ -1,21 +1,21 @@
 // Todos los textos del video están aquí: edítalos sin tocar las animaciones.
 export const content = {
   author: 'Cristina Cortés Calderé',
-  eyebrow: 'Turismo · Absentismo laboral',
+  eyebrow: 'Executive Search & Talent',
 
   intro: {
-    lead: 'Cada día, en el turismo español,',
+    lead: 'Cada día, en España, más de',
     number: 165000,
-    after: 'personas no acuden a su puesto.',
+    after: 'profesionales del turismo\nse ausentan de su puesto.',
   },
 
-  cost: {
-    lead: 'Un coste de casi',
-    number: 6000,
-    unit: 'M€',
-    after: 'para las empresas del sector',
-    percent: '2,6%',
-    percentLabel: 'de su facturación',
+  // Datos del análisis del Consejo de Turismo de CEOE (vía Hosteltur).
+  economy: {
+    lead: 'En un sector que aporta',
+    stats: [
+      {value: '12,8%', label: 'del PIB'},
+      {value: '13%', label: 'del empleo'},
+    ],
   },
 
   risk: {

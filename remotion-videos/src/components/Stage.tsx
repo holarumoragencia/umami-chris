@@ -1,6 +1,6 @@
 import React from 'react';
 
-/** Área de contenido bajo la cabecera; centra verticalmente (sirve para 4:5 y 9:16). */
+/** Área de contenido bajo la cabecera; ocupa todo el ancho y centra en vertical. */
 export const Stage: React.FC<{children: React.ReactNode; style?: React.CSSProperties}> = ({
   children,
   style,
@@ -8,10 +8,10 @@ export const Stage: React.FC<{children: React.ReactNode; style?: React.CSSProper
   <div
     style={{
       position: 'absolute',
-      top: 230,
-      bottom: 90,
-      left: 80,
-      right: 80,
+      top: 190,
+      bottom: 72,
+      left: 72,
+      right: 72,
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',

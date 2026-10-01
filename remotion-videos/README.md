@@ -24,10 +24,10 @@ npm run render:all  # ambos formatos
 
 | Tiempo | Escena |
 |---|---|
-| 0,0–3,7 s | Contador hasta **165.000** personas que no acuden cada día; 3 de 40 iconos desaparecen |
-| 3,7–7,3 s | Coste de casi **6.000 M€**, el **2,6 %** de la facturación |
+| 0,0–3,7 s | "Cada día, en España, más de **165.000** profesionales del turismo se ausentan de su puesto"; varios iconos de personas desaparecen |
+| 3,7–7,3 s | En un sector que aporta el **12,8 %** del PIB y el **13 %** del empleo |
 | 7,3–11,2 s | Lo que está en juego: calidad del servicio, competitividad y liderazgo turístico (trofeo que se agrieta) |
 | 11,2–14,1 s | Reacción: "La pregunta no es quién falta. **Es por qué.**" |
 | 14,1–15 s | Firma |
 
-En la barra de facturación, la porción naranja está exagerada a propósito: el 2,6 % real casi no se vería.
+Los datos provienen del análisis del Consejo de Turismo de CEOE publicado por Hosteltur.

@@ -10,26 +10,16 @@ export const Header: React.FC<{hideAt: number}> = ({hideAt}) => {
   const out = 1 - progress(frame, hideAt, 10);
 
   return (
-    <div style={{position: 'absolute', top: 80, left: 80, right: 80, opacity: out}}>
-      <div style={{display: 'flex', alignItems: 'center', gap: 14, ...enter(frame, 0, 12)}}>
-        <div
-          style={{
-            width: 14,
-            height: 14,
-            borderRadius: 7,
-            background: COLORS.accent,
-          }}
-        />
-        <div style={{fontSize: 30, fontWeight: 600, color: COLORS.ink, letterSpacing: -0.3}}>
-          {content.author}
-        </div>
+    <div style={{position: 'absolute', top: 72, left: 72, right: 72, opacity: out}}>
+      <div style={{fontSize: 34, fontWeight: 700, color: COLORS.ink, letterSpacing: -0.4, ...enter(frame, 0, 12)}}>
+        {content.author}
       </div>
       <div
         style={{
-          marginTop: 22,
+          marginTop: 12,
           fontSize: 22,
           fontWeight: 600,
-          letterSpacing: 2.5,
+          letterSpacing: 3,
           textTransform: 'uppercase',
           color: COLORS.ink,
           ...enter(frame, 4, 12),
