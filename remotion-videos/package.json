@@ -8,6 +8,7 @@
     "render": "remotion render Absentismo-4x5 out/absentismo-4x5.mp4",
     "render:vertical": "remotion render Absentismo-9x16 out/absentismo-9x16.mp4",
     "render:all": "npm run render && npm run render:vertical",
+    "sfx": "node scripts/generate-sfx.mjs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

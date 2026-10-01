@@ -10,6 +10,7 @@ Video de 15 s para LinkedIn: reacción al dato de absentismo laboral en el turis
 - **Textos y cifras:** `src/content.ts`
 - **Colores:** `src/theme.ts` (fondo `#ffffff`, texto `#2a2a2a`, acento `#f99f1a`)
 - **Tiempos de cada escena:** `SCENES` en `src/AbsentismoVideo.tsx`
+- **Efectos de sonido:** cues y volúmenes en `src/Soundtrack.tsx` (`MASTER` = volumen general). Los sonidos se sintetizan con `npm run sfx` (`scripts/generate-sfx.mjs`), así que no dependen de librerías con licencia.
 
 ## Usar
 

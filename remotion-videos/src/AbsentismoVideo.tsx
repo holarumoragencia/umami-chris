@@ -6,6 +6,7 @@ import {Intro} from './scenes/Intro';
 import {Outro} from './scenes/Outro';
 import {Reaction} from './scenes/Reaction';
 import {Risk} from './scenes/Risk';
+import {Soundtrack} from './Soundtrack';
 import {COLORS, FONT_FAMILY} from './theme';
 
 // Guion (30 fps, 15 s = 450 frames)
@@ -25,6 +26,7 @@ export const AbsentismoVideo: React.FC = () => (
       fontFamily: FONT_FAMILY,
     }}
   >
+    <Soundtrack />
     <Header hideAt={SCENES.outro.from - 8} />
     <Sequence from={SCENES.intro.from} durationInFrames={SCENES.intro.duration}>
       <Intro />
